@@ -1,2 +1,2 @@
-# PEKR
-한글 이름으로 되는지 생성
+# pekr
+Pekr.pe.kr 홈페이지 with next.js
