@@ -1,4 +1,3 @@
-.next/
-/node_module
-.github/*
+/node_modules
 yarn.lock
+package-lock.json
