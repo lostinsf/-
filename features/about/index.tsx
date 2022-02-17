@@ -4,7 +4,7 @@ import IsEqual from 'react-fast-compare';
 function About(): JSX.Element {
   return (
     <div>
-      <p>About</p>
+      <p>Abou</p>
     </div>
   );
 }
