@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import IsEqual from 'react-fast-compare';
 import { useRecoilValue } from 'recoil';
-import { Header } from '@components/index';
+import { HeaderBar, CustomRouter } from '@components/index';
 import { menuAtom } from '@lib/recoil';
 import { HamburgerFullscreen } from './styles';
 
@@ -15,9 +15,10 @@ function BaseLayout(props: BaseLayoutProps): JSX.Element {
 
   return (
     <>
-      <Header />
+      <HeaderBar />
+      <CustomRouter />
       {children}
-      <HamburgerFullscreen isHamburgerOpen={menuState.isHamburgerOpen} />
+      <HamburgerFullscreen isHamburgerOpen={menuState.isOpen} />
     </>
   );
 }
