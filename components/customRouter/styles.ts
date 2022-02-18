@@ -1,18 +1,18 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { defaultTheme, zIndexes, CONTAINER_PADDING_X, HAMBURGER_SIZE, HEADER_HEIGHT, HEADER_LINE_Y } from '@lib/styles';
+import { defaultTheme, zIndexes, CONTAINER_PADDING_X, ROUTER_SIZE, HEADER_HEIGHT, HEADER_LINE_Y } from '@lib/styles';
 
-type HamburgerWrapperProps = {
+type CurstomRouterWrapperProps = {
   isOpen: boolean;
 };
-export const HamburgerWrapper = styled.button<HamburgerWrapperProps>`
+export const CurstomRouterWrapper = styled.button<CurstomRouterWrapperProps>`
   background-color: transparent;
   height: ${HEADER_HEIGHT}px;
   padding: 0;
   right: ${CONTAINER_PADDING_X};
   position: fixed;
-  width: ${HAMBURGER_SIZE}px;
-  z-index: ${zIndexes.hamburegerMenu};
+  width: ${ROUTER_SIZE}px;
+  z-index: ${zIndexes.router};
   display: inline-flex;
   align-items: center;
   span {
@@ -21,7 +21,7 @@ export const HamburgerWrapper = styled.button<HamburgerWrapperProps>`
     height: 2px;
     position: relative;
     transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
-    width: ${HAMBURGER_SIZE * 0.3}px;
+    width: ${ROUTER_SIZE * 0.3}px;
     margin-top: ${HEADER_LINE_Y}px;
     &:before {
       background-color: ${defaultTheme.colors.blue};
@@ -30,7 +30,7 @@ export const HamburgerWrapper = styled.button<HamburgerWrapperProps>`
       height: 2px;
       position: absolute;
       transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
-      width: ${HAMBURGER_SIZE * 0.3}px;
+      width: ${ROUTER_SIZE * 0.3}px;
       top: -8px;
     }
     &:after {
@@ -40,7 +40,7 @@ export const HamburgerWrapper = styled.button<HamburgerWrapperProps>`
       height: 2px;
       position: absolute;
       transition: background-color 0.2s ease-in-out, top 0.2s 0.2s ease-out, transform 0.2s linear;
-      width: ${HAMBURGER_SIZE * 0.3}px;
+      width: ${ROUTER_SIZE * 0.3}px;
       top: 8px;
     }
   }
@@ -52,7 +52,7 @@ export const HamburgerWrapper = styled.button<HamburgerWrapperProps>`
     text-transform: uppercase;
     color: ${defaultTheme.colors.blue};
     position: relative;
-    width: ${HAMBURGER_SIZE * 0.7}px;
+    width: ${ROUTER_SIZE * 0.7}px;
     margin-top: ${HEADER_LINE_Y}px;
   }
 

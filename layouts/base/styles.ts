@@ -14,7 +14,7 @@ export const HamburgerFullscreen = styled(motion.div)<HamburgerFullscreenProps>`
   left: 0;
   height: 100%;
   width: 0%;
-  z-index: ${zIndexes.hamburegerFullscreen};
+  z-index: ${zIndexes.routerFullscreen};
   opacity: 0;
   visibility: none;
   transition: all 1s;

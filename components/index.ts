@@ -1,4 +1,4 @@
+export { default as HeaderBar } from './headerBar';
 export { default as CustomPointer } from './customPointer';
-export { default as Header } from './header';
-export { default as HamburgerButton } from './hamburgerButton';
+export { default as CustomRouter } from './customRouter';
 export { default as LoadingFullscreen } from './loadingFullscreen';

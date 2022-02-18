@@ -16,7 +16,7 @@ export const LoadingWrapper = styled(motion.div)<LoadingWrapperProps>`
   opacity: 1;
   background: ${defaultTheme.colors.white};
   transform-origin: right;
-  z-index: ${zIndexes.transitionFullscreen};
+  z-index: ${zIndexes.loadingFullscreen};
   visibility: visible;
   transition: all 1s;
 

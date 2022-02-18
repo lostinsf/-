@@ -10,7 +10,7 @@ declare module '@emotion/react' {
       blue: string;
     };
     fontSizes: {
-      labelHamburger: number;
+      labelRouter: number;
     };
   }
 }
