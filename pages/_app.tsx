@@ -102,5 +102,16 @@ function MyApp(props: MyAppProps): JSX.Element {
     </CacheProvider>
   );
 }
-
+/*
 export default appWithTranslation(MyApp);
+*/
+const WrappedApp = appWithTranslation(MyApp);
+
+// because we do not use the i18n feature of next.js
+export default function RouterEmulatedApp({ ...props }) {
+  // eslint-disable-next-line
+  props.router.locale = props.router.query.locale
+
+  // @ts-ignore
+  return <WrappedApp {...props} />;
+}
