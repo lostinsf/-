@@ -3,6 +3,7 @@ import { memo, useRef, useState } from 'react';
 import IsEqual from 'react-fast-compare';
 import * as THREE from 'three';
 import { Canvas, MeshProps, useFrame } from '@react-three/fiber';
+import { HomeWrapper, LinkContents } from './styles';
 
 function Box(props: MeshProps) {
   const mesh = useRef<THREE.Mesh>(null!);
@@ -29,16 +30,20 @@ function Box(props: MeshProps) {
 
 function Home(): JSX.Element {
   return (
-    <div>
-      <p>Home</p>
+    <HomeWrapper isShow>
       <Canvas>
         <ambientLight />
         <pointLight position={[10, 10, 10]} />
         <Box position={[-1.2, 0, 0]} />
         <Box position={[1.2, 0, 0]} />
       </Canvas>
-      <Link href="/about">Go To About</Link>
-    </div>
+      <Link href="/about">
+        <LinkContents>[CLICK] about으로 들어가기</LinkContents>
+      </Link>
+      <Link href="/services">
+        <LinkContents>[CLICK] services로 들어가기</LinkContents>
+      </Link>
+    </HomeWrapper>
   );
 }
 

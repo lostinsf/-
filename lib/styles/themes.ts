@@ -5,6 +5,7 @@ export const HEADER_HEIGHT = 60; // px
 export const HEADER_LINE_Y = 20; // px;
 export const ROUTER_SIZE = 80; // px
 export const BOOTSTRAP_SM = 576; // px
+export const FONTSIZE_MAIN = 18; // px
 
 export const zIndexes = {
   base: 1,
