@@ -3,11 +3,11 @@ import styled from '@emotion/styled';
 import { defaultTheme, zIndexes } from '@lib/styles';
 import { motion } from 'framer-motion';
 
-type HamburgerFullscreenProps = {
-  isHamburgerOpen: boolean;
+type RouterFullscreenProps = {
+  isOpen: boolean;
 };
 
-export const HamburgerFullscreen = styled(motion.div)<HamburgerFullscreenProps>`
+export const RouterFullscreenWrapper = styled(motion.div)<RouterFullscreenProps>`
   background: ${defaultTheme.colors.purple};
   position: fixed;
   top: 0;
@@ -20,7 +20,7 @@ export const HamburgerFullscreen = styled(motion.div)<HamburgerFullscreenProps>`
   transition: all 1s;
 
   ${(props) =>
-    props.isHamburgerOpen &&
+    props.isOpen &&
     css`
       width: 100%;
       opacity: 1;
