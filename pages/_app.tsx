@@ -13,6 +13,19 @@ import { defaultTheme, globalStyles } from '@lib/styles';
 import { createEmotionCache } from '@utils/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoadingFullscreen from '@components/loadingFullscreen';
+// import { Server } from 'socket.io';
+
+// io.on('connection', (socket) => {
+//   console.log(`유저명:${socket} 접속됨`);
+
+//   socket.on('send', (data) => {
+//     console.log('보낸 메세지: ', data.msg);
+//   });
+
+//   socket.on('disconnect', () => {
+//     console.log('유저 접속 종료');
+//   });
+// });
 
 const DynamicCustomPointer = dynamic(() => import('@components/customPointer'), { ssr: false });
 
