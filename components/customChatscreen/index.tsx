@@ -4,12 +4,13 @@ import { CustomCharScreenWrapper } from './styles';
 
 type CustomChatScreenProps = {
   isOpen: boolean;
+  children: JSX.Element;
 };
 
 function CustomChatScreen(props: CustomChatScreenProps): JSX.Element {
-  const { isOpen } = props;
+  const { isOpen, children } = props;
 
-  return <CustomCharScreenWrapper isOpen={isOpen} />;
+  return <CustomCharScreenWrapper isOpen={isOpen}>{children}</CustomCharScreenWrapper>;
 }
 
 export default memo(CustomChatScreen, IsEqual);

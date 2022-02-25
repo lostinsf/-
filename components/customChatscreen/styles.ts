@@ -9,6 +9,7 @@ type CustomChatscreenProps = {
 
 export const CustomCharScreenWrapper = styled(motion.div)<CustomChatscreenProps>`
   background: ${defaultTheme.colors.white};
+  color: ${defaultTheme.colors.black};
   position: fixed;
   top: 50%;
   left: 50%;
@@ -21,6 +22,7 @@ export const CustomCharScreenWrapper = styled(motion.div)<CustomChatscreenProps>
   opacity: 0;
   visibility: none;
   transition: all 1s;
+  padding: 20px;
 
   ${(props) =>
     props.isOpen &&

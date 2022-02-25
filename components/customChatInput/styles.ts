@@ -23,6 +23,7 @@ export const CustomCharInputWrapper = styled(motion.input)<CustomChatInputProps>
   opacity: 0;
   visibility: none;
   transition: all 1s;
+  padding: 20px;
 
   ${(props) =>
     props.isOpen &&
