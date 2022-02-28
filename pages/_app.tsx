@@ -7,14 +7,26 @@ import { appWithTranslation } from 'next-i18next';
 import { DefaultSeo } from 'next-seo';
 import { useEffect, useState, useCallback } from 'react';
 import { RecoilRoot } from 'recoil';
-import { CacheProvider, EmotionCache, Global, ThemeProvider } from '@emotion/react';
+import {
+  CacheProvider,
+  EmotionCache,
+  Global,
+  ThemeProvider,
+} from '@emotion/react';
 import config from '@lib/configs/seo.json';
+import { io } from 'socket.io-client';
 import { defaultTheme, globalStyles } from '@lib/styles';
 import { createEmotionCache } from '@utils/index';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import LoadingFullscreen from '@components/loadingFullscreen';
 
-const DynamicCustomPointer = dynamic(() => import('@components/customPointer'), { ssr: false });
+// ignore eslint
+const socket = io('http://localhost:8080');
+
+const DynamicCustomPointer = dynamic(
+  () => import('@components/customPointer'),
+  { ssr: false },
+);
 
 type MyAppProps = {
   emotionCache: EmotionCache;
@@ -92,7 +104,11 @@ function MyApp(props: MyAppProps): JSX.Element {
       <RecoilRoot>
         <Global styles={globalStyles} />
         <ThemeProvider theme={defaultTheme}>
-          <LoadingFullscreen key="LoadingFullscreen1" isShow={isLoading} progressNum={progressNum} />
+          <LoadingFullscreen
+            key="LoadingFullscreen1"
+            isShow={isLoading}
+            progressNum={progressNum}
+          />
           <AnimatePresence exitBeforeEnter>
             <DynamicCustomPointer />
             <Component {...pageProps} key={router.route} />
