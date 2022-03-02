@@ -1,0 +1,13 @@
+export interface SOECKET_EVENT_PROPS {
+  JOIN_MESSAGE: string;
+  ALERT_MESSAGE: string;
+  SEND_MESSAGE: string;
+  RECEIVE_MESSAGE: string;
+}
+
+export const SOCKET_EVENT: SOECKET_EVENT_PROPS = {
+  JOIN_MESSAGE: 'JOIN_MESSAGE', // 채널 입장
+  ALERT_MESSAGE: 'ALERT_MESSAGE', // 알림 메세지 받기
+  SEND_MESSAGE: 'SEND_MESSAGE', // 채팅 전송
+  RECEIVE_MESSAGE: 'RECEIVE_MESSAGE', // 채팅 받기
+};

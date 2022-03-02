@@ -12,6 +12,8 @@ export const zIndexes = {
   header: 100,
   routerFullscreen: 101,
   router: 102,
+  customChatscreen: 201,
+  customChatInput: 202,
   customPointer: 501,
   loadingFullscreen: 900,
 };
