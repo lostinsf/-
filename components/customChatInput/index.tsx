@@ -5,7 +5,7 @@ import { CustomCharInputWrapper } from './styles';
 type CustomChatInputProps = {
   isOpen: boolean;
   hasPlaceHolder: string;
-  ifOnKeyPress: (value: string) => void;
+  ifOnKeyPress: (value: KeyboardEvent<HTMLInputElement>) => void;
   ifOnClick: (value: string) => void;
 };
 
