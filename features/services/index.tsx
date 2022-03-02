@@ -51,7 +51,8 @@ function Services(): JSX.Element {
   const onChatDataSendKeyPress = useCallback(
     (e) => {
       const hasSenderId = hasChatId.hasChatId;
-      const hasSenderData = e.target.value;
+      const target = e.target as HTMLInputElement;
+      const hasSenderData = target.value;
 
       if (hasSenderId === '') {
         const insertSenderData = (

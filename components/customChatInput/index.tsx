@@ -5,7 +5,7 @@ import { CustomCharInputWrapper } from './styles';
 type CustomChatInputProps = {
   isOpen: boolean;
   hasPlaceHolder: string;
-  ifOnKeyPress: (value: KeyboardEvent<HTMLInputElement>) => void;
+  ifOnKeyPress: (e: KeyboardEvent<HTMLInputElement>) => void;
   ifOnClick: (value: string) => void;
 };
 
@@ -19,13 +19,17 @@ function CustomChatInput(props: CustomChatInputProps): JSX.Element {
 
     if (onInputKey === 'Enter') {
       ifOnKeyPress(e);
-      e.target.value = '';
+
+      const target = e.target as HTMLInputElement;
+      target.value = '';
     }
   };
 
   // 클릭 감지 함수 (부모 클릭 함수 필요)
   const onCustomChatInputClick = (e: MouseEvent<HTMLInputElement>) => {
-    const onInputValue = e.target.value;
+    const target = e.target as HTMLInputElement;
+
+    const onInputValue = target.value;
     if (onInputValue !== undefined) {
       ifOnClick(onInputValue);
     }
