@@ -29,16 +29,18 @@ export const LinkContents = styled.div`
 `;
 
 type ChatBalloonContentsProps = {
-  isRight: boolean;
+  isLeft?: boolean;
 };
 export const ChatBalloonContents = styled.div<ChatBalloonContentsProps>`
   position: relative;
   background: #88b7d5;
   border-radius: 50px;
   padding: 0 20px;
+  margin-bottom: 10px;
   width: fit-content;
   right: 0;
   float: right;
+  clear: both;
   height: 40px;
   display: flex;
   align-items: center;
@@ -58,7 +60,7 @@ export const ChatBalloonContents = styled.div<ChatBalloonContentsProps>`
   }
 
   ${(props) =>
-    props.isRight &&
+    props.isLeft &&
     css`
     background: #1c8a18;
     float: left;

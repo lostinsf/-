@@ -23,6 +23,7 @@ export const CustomCharScreenWrapper = styled(motion.div)<CustomChatscreenProps>
   visibility: none;
   transition: all 1s;
   padding: 20px;
+  overflow: scroll;
 
   ${(props) =>
     props.isOpen &&
